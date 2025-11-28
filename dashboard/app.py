@@ -1,7 +1,5 @@
 """
 Streamlit Dashboard for MLB Pitch Strike Prediction
-
-Run with: streamlit run dashboard/app.py
 """
 
 import sys

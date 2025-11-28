@@ -1,6 +1,5 @@
 """
 MLB Gameday Theme Utilities
-Provides CSS styling and logo download functionality for the dashboard.
 """
 
 import sys
@@ -36,17 +35,13 @@ def download_mlb_logo(logo_path: Path):
     # MLB logo URL (using a reliable source)
     logo_url = "https://www.mlbstatic.com/team-logos/league-on-dark/1.svg"
     
-    # Try SVG first, if that doesn't work, try PNG
+
     png_urls = [
         "https://www.mlbstatic.com/team-logos/league-on-dark/1.svg",
         "https://www.mlb.com/assets/images/logos/league-dark/1.svg",
     ]
     
-    # For simplicity, we'll create a placeholder or use a simple approach
-    # Since SVG won't work directly with Streamlit images easily, we'll note this
-    # and create a simple text-based logo placeholder or use an existing image
-    
-    # Actually, let's use a simple approach - create a minimal PNG if download fails
+   
     try:
         # Try to download from a reliable CDN
         urllib.request.urlretrieve(
@@ -54,9 +49,8 @@ def download_mlb_logo(logo_path: Path):
             logo_path.with_suffix('.svg')
         )
         # Convert SVG to PNG would require additional libraries
-        # For now, we'll just note that the file should exist
     except (urllib.error.URLError, Exception):
-        # If download fails, we'll just continue - the logo path check will handle it
+        # If download fails, just continue - the logo path check will handle it
         pass
 
 def get_gameday_css() -> str:

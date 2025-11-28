@@ -61,10 +61,6 @@ The goal is to build a binary classification model that predicts `is_strike = 1`
 # On Windows
 python -m venv venv
 venv\Scripts\activate
-
-# On Mac/Linux
-python -m venv venv
-source venv/bin/activate
 ```
 
 ### 2. Install Dependencies
