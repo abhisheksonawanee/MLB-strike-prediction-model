@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlb-strike-prediction"
+version = "0.1.0"
+description = "MLB pitch-level strike prediction model for MSBA 265"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "scikit-learn>=1.3.0",
+    "matplotlib>=3.7.0",
+    "pybaseball>=2.2.0",
+    "joblib>=1.3.0",
+    "jupyter>=1.0.0",
+    "notebook>=7.0.0",
+    "ipykernel>=6.25.0",
+    "xgboost>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = []
+
