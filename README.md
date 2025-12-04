@@ -6,12 +6,12 @@ This project predicts whether an MLB pitch will be called a strike or a ball usi
 
 ---
 
-## 0. Clone this Repository
+## Clone this Repository
 
 To download all project files to your computer using HTTPS:
 
 ```bash
-git clone https://github.com/abhisheksonawanee/MLB-strike-prediction-model.git
+git clone https://github.com/abhisheksonawanee/MLB-strike-prediction-model
 
 cd MLB-strike-prediction-model
 ```
@@ -70,9 +70,17 @@ The goal is to build a binary classification model that predicts `is_strike = 1`
 ### 1. Create Virtual Environment
 
 ```bash
-# On Windows
+# On Windows (PowerShell)
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+
+# On Windows (Command Prompt)
 python -m venv venv
 venv\Scripts\activate
+
+# On Mac/Linux
+python -m venv venv
+source venv/bin/activate
 ```
 
 ### 2. Install Dependencies
@@ -87,22 +95,22 @@ Execute the following scripts in order:
 
 ```bash
 # Step 1: Download raw data from Statcast
-python download_data.py
+python scripts/download_data.py
 ```
 
 ```bash
 # Step 2: Process and clean the data
-python make_dataset.py
+python scripts/make_dataset.py
 ```
 
 ```bash
 # Step 3: Train models
-python train_models.py
+python scripts/train_models.py
 ```
 
 ```bash
 # Step 4: Evaluate models (optional, also done in train_models.py)
-python evaluate_models.py
+python scripts/evaluate_models.py
 ```
 
 ### 4. Explore in Notebooks
