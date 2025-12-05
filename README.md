@@ -12,7 +12,8 @@ To download all project files to your computer using HTTPS:
 
 ```bash
 git clone https://github.com/abhisheksonawanee/MLB-strike-prediction-model
-
+```
+```bash
 cd MLB-strike-prediction-model
 ```
 
@@ -73,11 +74,13 @@ The goal is to build a binary classification model that predicts `is_strike = 1`
 # On Windows (PowerShell)
 python -m venv venv
 .\venv\Scripts\Activate.ps1
-
+```
+```bash
 # On Windows (Command Prompt)
 python -m venv venv
 venv\Scripts\activate
-
+```
+```bash
 # On Mac/Linux
 python -m venv venv
 source venv/bin/activate
@@ -119,6 +122,8 @@ Open the Jupyter notebooks for interactive exploration:
 
 ```bash
 jupyter notebook notebooks/01_eda.ipynb
+```
+```bash
 jupyter notebook notebooks/02_modeling.ipynb
 ```
 
