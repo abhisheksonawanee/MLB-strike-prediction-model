@@ -185,9 +185,12 @@ def train_all_models(
         trained_model = train_model(model, X_train, y_train, name)
         trained_models[name] = trained_model
         
-        # Save model
+        # Save model (ensure path is a string for compatibility)
         model_path = models_dir / f"{name}.joblib"
-        joblib.dump(trained_model, model_path)
+        # Ensure the models directory exists
+        model_path.parent.mkdir(parents=True, exist_ok=True)
+        # Use string path when calling joblib.dump to avoid Windows path issues
+        joblib.dump(trained_model, str(model_path))
         logger.info(f"Saved {name} to {model_path}")
     
     return trained_models
